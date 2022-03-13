@@ -14,8 +14,17 @@ class IdealGasApp : public ci::app::App {
  public:
   IdealGasApp();
 
+  /**
+   * Draw for simulation
+   */
   void draw() override;
+  /**
+   * Update for simulation
+   */
   void update() override;
+  /**
+   * Set Up for simulation
+   */
   void setUp() override;
 
   // TODO: Delete this comment. Feel free to play around with these variables
