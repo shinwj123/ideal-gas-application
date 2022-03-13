@@ -16,6 +16,7 @@ class IdealGasApp : public ci::app::App {
 
   void draw() override;
   void update() override;
+  void setUp() override;
 
   // TODO: Delete this comment. Feel free to play around with these variables
   // provided that you can see the entire UI on your screen.
@@ -24,6 +25,17 @@ class IdealGasApp : public ci::app::App {
 
  private:
   GasContainer container_;
+    const std::string particle1Color = "white";
+    const std::string particle2Color = "blue";
+    const std::string kParticle3Color = "orange";
+
+    constexpr static double particle1Radius = 12;
+    constexpr static double particle2Radius = 10;
+    constexpr static double particle3Radius = 5;
+
+    const static size_t particle1Amount = 10;
+    const static size_t particle2Amount = 10;
+    const static size_t particle3Amount = 10;
 };
 
 }  // namespace idealgas

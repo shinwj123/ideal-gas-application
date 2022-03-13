@@ -17,4 +17,10 @@ void IdealGasApp::update() {
   container_.AdvanceOneFrame();
 }
 
+void IdealGasApp::setup() {
+    container_.AddParticles(particle1Amount, particle1Radius,particle1Color);
+    container_.AddParticles(particle2Amount, particle2Radius,particle2Color);
+    container_.AddParticles(particle3Amount, particle3Radius,particle3Color);
+}
+
 }  // namespace idealgas
