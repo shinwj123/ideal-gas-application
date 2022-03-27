@@ -27,13 +27,13 @@ class IdealGasApp : public ci::app::App {
    */
   void setUp() override;
 
-  // TODO: Delete this comment. Feel free to play around with these variables
-  // provided that you can see the entire UI on your screen.
   const int kWindowSize = 875;
   const int kMargin = 100;
 
  private:
   GasContainer container_;
+  Histogram histogram_;
+
     const std::string particle1Color = "white";
     const std::string particle2Color = "blue";
     const std::string kParticle3Color = "orange";

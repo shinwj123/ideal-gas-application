@@ -1,4 +1,5 @@
 #include "gas_container.h"
+#include "particle.h"
 
 using std::string;
 using std::vector;
@@ -33,7 +34,7 @@ void GasContainer::AdvanceOneFrame() {
                 Collide(particles_[i],particles_[j]);
             }
         }
-        particles_[i].Update();
+        particles_[i].CollideUpdate();
     }
 }
 
@@ -43,7 +44,7 @@ void GasContainer::DrawContainerWall() {
 }
 
 void GasContainer::AddParticles(size_t amount, double radius, const std::string& color, size_t x_coord, size_t y_coord,
-                                double initial_x_vel, double initial_y_vel) {
+                                double initial_x_vel, double initial_y_vel, double mass) {
     for (size_t i = 0; i < amount; i++) {
         particles_.emplace_back(vec2(x_coord, y_coord), vec2(initial_x_vel, initial_y_vel), radius, color);
     }
@@ -81,6 +82,34 @@ bool GasContainer::CheckCollide(const Particle& particle1, const Particle& parti
     }
 
     return false;
+}
+
+void GasContainer::CollideUpdate() {
+    position_ += velocity_;
+
+    if (velocity_.x > 0) {
+        if (position_.x >= GasContainer::kXUpperBound - radius_) {
+            velocity_.x = -velocity_.x;
+        }
+    }
+
+    if (velocity_.y > 0) {
+        if (position_.y >= GasContainer::kYUpperBound - radius_) {
+            velocity_.y = -velocity_.y;
+        }
+    }
+
+    if (velocity_.x < 0) {
+        if (position_.x <= GasContainer::kXLowerBound + radius_) {
+            velocity_.x = -velocity_.x;
+        }
+    }
+
+    if (velocity_.y < 0) {
+        if (position_.y <= GasContainer::kYLowerBound + radius_) {
+            velocity_.y = -velocity_.y;
+        }
+    }
 }
 
 }  // namespace idealgas

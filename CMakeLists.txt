@@ -44,29 +44,29 @@ if(NOT catch2_POPULATED)
     target_include_directories(catch2 INTERFACE ${catch2_SOURCE_DIR}/single_include)
 endif()
 
-get_filename_component(CINDER_PATH "${CMAKE_CURRENT_SOURCE_DIR}/../../" ABSOLUTE)
-get_filename_component(APP_PATH "${CMAKE_CURRENT_SOURCE_DIR}/" ABSOLUTE)
+get_filename_component(CINDER_PATH ".." ABSOLUTE)
+get_filename_component(APP_PATH "../Cinder/my-projects" ABSOLUTE)
 
 include("${CINDER_PATH}/proj/cmake/modules/cinderMakeApp.cmake")
 
-list(APPEND SOURCE_FILES    src/gas_container.cc
-                            src/gas_simulation_app.cc
-                            src/particle.cc)
+list(APPEND SOURCE_FILES src/gas_container.cc
+        src/gas_simulation_app.cc
+        src/particle.cc)
 
 list(APPEND TEST_FILES tests/test_gas container.cc tests/test_particle.cc)
 
 ci_make_app(
         APP_NAME        gas-simulation
         CINDER_PATH     ${CINDER_PATH}/Cinder
-        SOURCES         apps/cinder_app_main.cc ${SOURCE_FILES}
-        INCLUDES        include
+        SOURCES ../Cinder/my-projects/apps/cinder_app_main.cc ${SOURCE_FILES}
+        INCLUDES include
 )
 
 ci_make_app(
         APP_NAME        gas-simulation-test
         CINDER_PATH     ${CINDER_PATH}/Cinder
-        SOURCES         tests/test_main.cc ${SOURCE_FILES} ${TEST_FILES}
-        INCLUDES        include
+        SOURCES tests/test_main.cc ${SOURCE_FILES} ${TEST_FILES}
+        INCLUDES include
         LIBRARIES       catch2
 )
 

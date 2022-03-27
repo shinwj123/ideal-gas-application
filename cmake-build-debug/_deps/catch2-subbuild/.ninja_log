@@ -1,0 +1,21 @@
+# ninja log v5
+1	97	6700431076634236	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-mkdir	d44174d190789ef9
+1	97	6700431076634236	C:/Users/shinw/Desktop/week2/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-mkdir	d44174d190789ef9
+97	4506	6700431120869895	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-download	5cf840e777aaa855
+97	4506	6700431120869895	C:/Users/shinw/Desktop/week2/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-download	5cf840e777aaa855
+4506	5451	0	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-update	d88d1132b7d761f7
+4506	5451	0	C:/Users/shinw/Desktop/week2/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-update	d88d1132b7d761f7
+5451	5481	6700431130593098	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-patch	5af8860873100ff7
+5451	5481	6700431130593098	C:/Users/shinw/Desktop/week2/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-patch	5af8860873100ff7
+5481	5509	6700431130909642	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-configure	d699cbab0758d285
+5481	5509	6700431130909642	C:/Users/shinw/Desktop/week2/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-configure	d699cbab0758d285
+5509	5536	6700431131065924	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-build	d78df2760942ba99
+5509	5536	6700431131065924	C:/Users/shinw/Desktop/week2/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-build	d78df2760942ba99
+5536	5563	6700431131378356	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-install	f66605ea7b6f01b9
+5536	5563	6700431131378356	C:/Users/shinw/Desktop/week2/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-install	f66605ea7b6f01b9
+5563	5590	6700431131696500	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-test	2a06cded4841ff18
+5563	5590	6700431131696500	C:/Users/shinw/Desktop/week2/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-test	2a06cded4841ff18
+5590	5630	6700431132009072	CMakeFiles/catch2-populate-complete	9c484d9d8d017446
+5590	5630	6700431132009072	catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-done	9c484d9d8d017446
+5590	5630	6700431132009072	C:/Users/shinw/Desktop/week2/cmake-build-debug/_deps/catch2-subbuild/CMakeFiles/catch2-populate-complete	9c484d9d8d017446
+5590	5630	6700431132009072	C:/Users/shinw/Desktop/week2/cmake-build-debug/_deps/catch2-subbuild/catch2-populate-prefix/src/catch2-populate-stamp/catch2-populate-done	9c484d9d8d017446

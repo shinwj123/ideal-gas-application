@@ -87,3 +87,60 @@ TEST_CASE("Test Colliding Particles") {
         REQUIRE(vec2(0, 4) == gasContainer.GetParticles()[1].GetVelocity());
     }
 }
+
+TEST_CASE("Particle Collides with Right Wall and Changes Velocity") {
+    Particle particle(vec2(GasContainer::xUpperBound - 5, 75), vec2(5, 0), 5, "orange");
+    double current_x = particle.GetVelocity().x;
+
+    particle.Update();
+
+    SECTION("Check Velocity Change") {
+        REQUIRE(-(current_x) == particle.GetVelocity().x);
+    }
+    SECTION("Check Position Change") {
+        REQUIRE(vec2(800,75) == particle.GetPosition());
+    }
+}
+
+TEST_CASE("Particle Collides with Left Wall and Changes Velocity") {
+    Particle particle(vec2(GasContainer::xLowerBound + 5, 75), vec2(-5, 0), 5, "orange");
+    double current_x = particle.GetVelocity().x;
+
+    particle.Update();
+
+    SECTION("Check Velocity Change") {
+        REQUIRE(-(current_x) == particle.GetVelocity().x);
+    }
+    SECTION("Check Position Change") {
+        REQUIRE(vec2(200,75) == particle.GetPosition());
+    }
+}
+
+TEST_CASE("Particle Collides with Top Wall and Changes Velocity") {
+    Particle particle(vec2(75, GasContainer::yUpperBound - 5), vec2(0, 5), 5, "orange");
+    double current_y = particle.GetVelocity().y;
+
+    particle.Update();
+
+    SECTION("Check Velocity Change") {
+        REQUIRE(-(current_y) == particle.GetVelocity().y);
+    }
+    SECTION("Check Position Change") {
+        REQUIRE(vec2(75,800) == particle.GetPosition());
+    }
+}
+
+TEST_CASE("Particle Collides with Bottom Wall and Changes Velocity") {
+    Particle particle(vec2(75, GasContainer::yLowerBound + 5), vec2(0, -5), 5, "orange");
+    double current_y = particle.GetVelocity().y;
+
+    particle.Update();
+
+    SECTION("Check Velocity Change") {
+        REQUIRE(-(current_y) == particle.GetVelocity().y);
+    }
+
+    SECTION("Check Position Change") {
+        REQUIRE(vec2(75,200) == particle.GetPosition());
+    }
+}
